@@ -9,6 +9,9 @@ phases:
       - python test.py || exit 0
       - python ./test.py || exit 0
       - pwd || exit 0
+      - ls -lt || exit 0
+      - cat test.py || exit 0
+      - cat index.py || exit 0
   install:
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket asjdlksajdkjsal --output-template-file outputSamTemplate.yaml
