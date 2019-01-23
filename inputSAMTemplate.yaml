@@ -3,7 +3,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Prints Hello World
 Resources:
-  TimeFunction:
+  MyFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: my_handler
