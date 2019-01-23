@@ -5,7 +5,7 @@ class mytest(unittest.TestCase):
   def test_1_otherfilefunction(self):
     self.assertEqual(sample_to_test(), "sample") # this should pass
   def test_2_otherfilefunction(self):
-    self.assertFalse(sample_to_test(), "Sample") # this should pass    
+    self.assertNotEqual(sample_to_test(), "Sample") # this should pass    
 
 if __name__ == '__main__':
   unittest.main()
