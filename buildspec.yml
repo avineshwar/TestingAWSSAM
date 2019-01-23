@@ -1,10 +1,16 @@
-
 version: 0.2
 phases:
+  build:
+    commands:
+      -  whereis pip || exit 0
+      - whereis python || exit 0
+      - python --version || exit 0
+      - which python || exit 0
+      - python test.py || exit 0
+      - python ./test.py || exit 0
+      - pwd || exit 0
   install:
     commands:
-      - pip install unittest --user || exit 0
-      - pip install unittest || exit 0
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket asjdlksajdkjsal --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
