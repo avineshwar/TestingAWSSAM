@@ -1,4 +1,5 @@
-import index
+import importlib
+importlib.import_module(index)
 import unittest
 
 def sample_function():
