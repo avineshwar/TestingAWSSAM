@@ -1,15 +1,9 @@
-import importlib
-importlib.import_module(index)
+from index import sample_to_test
 import unittest
 
-def sample_function():
-  return "hello"
-
 class mytest(unittest.TestCase):
-  def test1(self):
-    self.assertEqual("hello", "hello")
-  def test2(self):
-    self.assertEqual(index.sample_to_test(), "sample")
+  def test_otherfilefunction(self):
+    self.assertEqual(sample_to_test(), "sample")
 
 if __name__ == '__main__':
   unittest.main()
