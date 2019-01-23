@@ -1,17 +1,17 @@
 
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Outputs the time
+Description: Prints Hello World
 Resources:
   TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
-      Runtime: nodejs8.10
+      Handler: my_handler
+      Runtime: python3.7    
       CodeUri: ./
       Events:
         MyTimeApi:
           Type: Api
           Properties:
-            Path: /TimeResource
+            Path: /HelloWorld
             Method: GET
