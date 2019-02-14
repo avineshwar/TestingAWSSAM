@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: 'This is a sample AWS Config rule'
+Resources:
+  Function-1:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: FunctionName
+      Handler: lambda_handler
+      Runtime: python3.6
+      CodeUri: ./
