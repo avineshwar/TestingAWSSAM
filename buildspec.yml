@@ -5,12 +5,11 @@ phases:
       - which python
       - whereis python
       - python --version
-      - python test.py
   install:
     commands:
-      - aws cloudformation package --template-file inputSAMTemplate.yaml --s3-bucket asjdlksajdkjsal --output-template-file outputSAMTemplate.yaml
+      - aws cloudformation package --template-file sam_template.yaml --s3-bucket awsconfig-20190214010335263400000004 --output-template-file output_sam_template.yaml
 artifacts:
   type: zip
   files:
-    - inputSAMTemplate.yaml
-    - outputSAMTemplate.yaml
+    - input_sam_template.yaml
+    - output_sam_template.yaml
